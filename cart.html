@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:30px; color: white;">TIMELESS TREASURES</h2>
+    <div class="contact-info"><br>
+        📞 +91 88821 88858<br>
+        E-mail:timelesstreasures@gmail.com
+    </div>
+    <div class="info">
+    <a href="#quick" style="text-decoration: none; color: black;">Quick</a>
+    <a href="#quick" style="text-decoration: none; color: black;">Links</a>
+    <a href="#quick" style="text-decoration: none; color: black;">Info</a>
+    </div>
+    <div class="logo1">
+        <img src="https://res.cloudinary.com/dtnmwdkou/image/upload/v1732117323/WhatsApp_Image_2024-11-20_at_21.11.40_f7fc20c1_mql6ax.jpg">
+    </div><hr>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="http://127.0.0.1:5500/lucx/index.html" style="text-decoration: none;">Luxe</a>
+            <a href="http://127.0.0.1:5500/search-project/index.html" style="text-decoration: none;">🔍</a>
+            <a href="http://127.0.0.1:5500/signin-otp/index.html" style="text-decoration: none;">👤</a>
+            <a href="http://127.0.0.1:5500/wishlist/index.html" style="text-decoration: none;">❤</a>
+            <a href="http://127.0.0.1:5500/cart/cart.html" class="nav-cart" style="text-decoration: none;">🛒</a>
+            <a href="" class="virtual" style="text-decoration: none;">🎥</a>
+        </div>
+        <div class="nav-right">
+            <a href="http://127.0.0.1:5500/x/index.html">HOME</a>
+            <a href="http://127.0.0.1:5500/x/index.html">ALL JEWELS</a>
+            <a href="http://127.0.0.1:5500/x/index.html">WHAT'S NEW</a>
+            <div class="dropdown">
+                <button class="dropbtn">COLLECTION ˅
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="http://127.0.0.1:5500/x/index.html">Wedding Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Diamond Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Party Night Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Desi Girl Collection</a>
+                </div>
+            </div> 
+        </div>
+    </nav>
+</header>
+     <!-- nav bar -->
+  <div class="wishlist-container">
+    <div class="tabs">
+      <span class="tab active">Shopping Cart</span>
+    </div>
+    <div class="content">
+      <h2>Your cart is empty.</h2>
+      <p>Let's fill it up with some amazing jewellery!</p>
+      <div class="heart-icon">🛒</div>
+      <ul id="cart-items"></ul> <!-- List for cart items -->
+
+      <a href="http://127.0.0.1:5500/x/index.html">
+        <button class="start-shopping">Start Shopping</button>
+      </a>
+    </div>
+  </div>
+  <section id="quick">
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="contact">
+                <p>Email: <a href="mailto:">timelesstreasures@gmail.com</a></p>
+                <p>Phone: <a href="tel:+918882188858">+91 88821 88858</a></p>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/hair%20accesories/index.html">Hair Accessories</a></li>
+                <li><a href="http://127.0.0.1:5500/rings/index.html">Rings</a></li>
+                <li><a href="http://127.0.0.1:5500/earrings/index.html">Earrings</a></li>
+                <li><a href="http://127.0.0.1:5500/neckpieces/index.html">Neckpieces</a></li>
+                <li><a href="http://127.0.0.1:5500/bracelet-project/index.html">Bracelets</a></li>
+                <li><a href="http://127.0.0.1:5500/Anklets/index.html">Anklets</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/aboutus/index.html">About Us</a></li>
+                <li><a href="http://127.0.0.1:5500/terms&conditions/index.html">Terms & Conditions</a></li>
+                <li><a href="http://127.0.0.1:5500/delivery/index.html">Delivery & Returns</a></li>
+                <li><a href="http://127.0.0.1:5500/privacy/index.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/signin-otp/index.html">My Account</a></li>
+                <li><a href="http://127.0.0.1:5500/questions/index.html">Questions?</a></li>
+            </ul>
+            <div class="newsletter">
+                <h3>Subscribe to our newsletter</h3>
+                <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </footer>
+</section> 
+    <!-- quick -->
+
+  <!-- JavaScript for cart functionality -->
+  <script>
+    window.onload = function () {
+      // Get the cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Get the cart items list element
+      const cartItemsList = document.getElementById("cart-items");
+
+      // Get the empty cart message elements
+      const emptyMessage = document.querySelector(".content h2");
+      const emptySubMessage = document.querySelector(".content p");
+
+      // Function to render the cart items
+      function renderCart() {
+        cartItemsList.innerHTML = ""; // Clear the cart items list
+
+        if (cart.length === 0) {
+          // Show the empty cart message
+          emptyMessage.style.display = "block";
+          emptySubMessage.style.display = "block";
+        } else {
+          // Hide the empty cart message
+          emptyMessage.style.display = "none";
+          emptySubMessage.style.display = "none";
+
+          // Populate the cart items dynamically
+          cart.forEach((item, index) => {
+            const li = document.createElement("li");
+
+            // Create an image element for the product
+            const img = document.createElement("img");
+            img.src = item.image;
+            img.alt = item.name;
+            img.width = 50;
+            img.style.marginRight = "10px";
+
+            // Create text for the item (name and price)
+            const itemText = document.createTextNode(`${item.name} - $${item.price}`);
+
+            // Create a Remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+            removeBtn.style.marginLeft = "10px";
+            removeBtn.style.backgroundColor = "#FF4D4D";
+            removeBtn.style.color = "white";
+            removeBtn.style.border = "none";
+            removeBtn.style.padding = "5px 10px";
+            removeBtn.style.borderRadius = "5px";
+            removeBtn.style.cursor = "pointer";
+
+            // Add event listener to the Remove button
+            removeBtn.addEventListener("click", () => {
+              cart.splice(index, 1); // Remove the item from the cart array
+              localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+              renderCart(); // Re-render the cart
+            });
+
+            // Create a Buy Now button
+            const buyNowBtn = document.createElement("button");
+            buyNowBtn.textContent = "Buy Now";
+            buyNowBtn.style.marginLeft = "10px";
+            buyNowBtn.style.backgroundColor = "#4CAF50";
+            buyNowBtn.style.color = "white";
+            buyNowBtn.style.border = "none";
+            buyNowBtn.style.padding = "5px 10px";
+            buyNowBtn.style.borderRadius = "5px";
+            buyNowBtn.style.cursor = "pointer";
+
+            // Add event listener to the Buy Now button
+            buyNowBtn.addEventListener("click", () => {
+  // Redirect to the payment page
+  window.location.href = "http://127.0.0.1:5500/payment-project/index.html"; // Replace with the actual path to your payment page
+});
+
+            // Append elements to the list item
+            li.appendChild(img);
+            li.appendChild(itemText);
+            li.appendChild(removeBtn); // Add Remove button
+            li.appendChild(buyNowBtn); // Add Buy Now button
+
+            // Add the list item to the cart list
+            cartItemsList.appendChild(li);
+          });
+        }
+      }
+
+      // Initial render
+      renderCart();
+    };
+  </script>
+</body>
+</html>

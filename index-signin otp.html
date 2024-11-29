@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In with OTP</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+          body {
+            font-family: Arial, sans-serif; 
+            /* display:flex; */
+            justify-content: center;
+            align-items: center; 
+          }
+            /* height: 100vh;
+            background-color: #f9f9f9; */ */
+        
+        .otp-modal {
+            border: 1px solid #a98b8b;
+            width: 600px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal-header {
+            background-color: rgb(147, 110, 116);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .modal-body {
+            padding: 15px;
+        }
+        .modal-body p {
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        #sendOtp {
+            background-color: black;
+            color: white;
+        }
+        #loginWithPassword {
+            background: none;
+            color: black;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- nav bar -->
+        <header class="header">
+            <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:30px;">TIMELESS TREASURES</h2>
+            <div class="contact-info"><br>
+                📞 +91 88821 88858<br>
+                E-mail:timelesstreasures@gmail.com
+            </div>
+            <div class="info">
+            <a href="#quick" style="text-decoration: none; color: black;">Quick</a>
+            <a href="#quick" style="text-decoration: none; color: black;">Links</a>
+            <a href="#quick" style="text-decoration: none; color: black;">Info</a>
+            </div>
+            <div class="logo1">
+                <img src="https://res.cloudinary.com/dtnmwdkou/image/upload/v1732117323/WhatsApp_Image_2024-11-20_at_21.11.40_f7fc20c1_mql6ax.jpg">
+            </div><hr>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="http://127.0.0.1:5500/lucx/index.html" style="text-decoration: none;">Luxe</a>
+                    <a href="http://127.0.0.1:5500/search-project/index.html" style="text-decoration: none;">🔍</a>
+                    <a href="http://127.0.0.1:5500/signin-otp/index.html" style="text-decoration: none;">👤</a>
+                    <a href="http://127.0.0.1:5500/wishlist/index.html" style="text-decoration: none;">❤</a>
+                    <a href="http://127.0.0.1:5500/cart/cart.html" class="nav-cart" style="text-decoration: none;">🛒</a>
+                </div>
+                <div class="nav-right">
+                    <a href="http://127.0.0.1:5500/x/index.html">HOME</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">ALL JEWELS</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">WHAT'S NEW</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">COLLECTION ˅
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="http://127.0.0.1:5500/x/index.html">Wedding Collection</a>
+                            <a href="http://127.0.0.1:5500/x/index.html">Diamond Collection</a>
+                            <a href="http://127.0.0.1:5500/x/index.html">Party Night Collection</a>
+                            <a href="http://127.0.0.1:5500/x/index.html">Desi Girl Collection</a>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+        </header>
+        </div>
+
+    <div class="otp-modal" style="padding-top: 500px; width: 700px; height: 50vh;  justify-content: center;
+            align-items: center; padding-left: 650px;">
+        <div class="modal-header">SIGN IN WITH OTP</div>
+        <div class="modal-body">
+            <b><p>ENTER PHONE NUMBER.</p></b><br>
+            <p>WE WILL SEND AN OTP ON THIS NUMBER VIA SMS</p><br><br>
+            <input type="text" id="phoneNumber" placeholder="Mobile No*" /><br><br>
+            <button id="sendOtp">Send Otp</button><br><br>
+            <button id="loginWithPassword">Login With Password</button>
+        </div>
+    </div>
+
+    <!-- quick -->
+    <section id="quick">
+        <footer class="footer">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact">
+                    <p>Email: <a href="mailto:">timelesstreasures@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+918882188858">+91 88821 88858</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/hair%20accesories/index.html">Hair Accessories</a></li>
+                    <li><a href="http://127.0.0.1:5500/rings/index.html">Rings</a></li>
+                    <li><a href="http://127.0.0.1:5500/earrings/index.html">Earrings</a></li>
+                    <li><a href="http://127.0.0.1:5500/neckpieces/index.html">Neckpieces</a></li>
+                    <li><a href="http://127.0.0.1:5500/bracelet-project/index.html">Bracelets</a></li>
+                    <li><a href="http://127.0.0.1:5500/Anklets/index.html">Anklets</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/aboutus/index.html">About Us</a></li>
+                    <li><a href="http://127.0.0.1:5500/terms&conditions/index.html">Terms & Conditions</a></li>
+                    <li><a href="http://127.0.0.1:5500/delivery/index.html">Delivery & Returns</a></li>
+                    <li><a href="http://127.0.0.1:5500/privacy/index.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/signin-otp/index.html">My Account</a></li>
+                    <li><a href="http://127.0.0.1:5500/questions/index.html">Questions?</a></li>
+                </ul>
+                <div class="newsletter">
+                    <h3>Subscribe to our newsletter</h3>
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+        <!-- quick -->
+    <script>
+        document.getElementById('sendOtp').addEventListener('click', function() {
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            if (phoneNumber === "") {
+                alert("Please fill in the phone number.");
+            } else {
+                alert('OTP sent!');
+                window.location.href = 'http://127.0.0.1:5500/otp/index.html';
+            }
+        });
+
+        document.getElementById('loginWithPassword').addEventListener('click', function() {
+            window.location.href = 'http://127.0.0.1:5500/proj-signin/index.html';
+        });
+    </script>
+</body>
+</html>

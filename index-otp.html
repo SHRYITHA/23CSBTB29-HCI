@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OTP</h1>
+        <div class="icon">✔️</div>
+        <p>Enter OTP</p>
+        <div class="otp-input">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+        <button onclick="checkOTP()">Check OTP</button>
+    </div>
+    <script>
+        document.querySelectorAll('.otp-input input').forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1) {
+                    if (index < 5) {
+                        input.nextElementSibling.focus();
+                    }
+                }
+            });
+        });
+
+        function checkOTP() {
+            const otpInputs = document.querySelectorAll('.otp-input input');
+            const otp = Array.from(otpInputs).map(input => input.value).join('');
+
+            if (otp.length < 6) {
+                alert("Please fill in all OTP fields.");
+                return;
+            }
+
+            // Simulate sending OTP to server for verification
+            verifyOTP(otp).then(isValid => {
+                if (isValid) {
+                    window.location.href = 'http://127.0.0.1:5500/x/index.html'; // Redirect to home page
+                } else {
+                    alert('Invalid OTP. Please try again.');
+                }
+            });
+        }
+
+        // Simulated server-side OTP verification function
+        function verifyOTP(otp) {
+            return new Promise((resolve) => {
+                // Simulate server response delay
+                setTimeout(() => {
+                    // For demonstration, assume any OTP is valid
+                    resolve(true);
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>

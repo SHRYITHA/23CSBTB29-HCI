@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Jewelry Try-On</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .camera-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            margin: 20px 0;
+            border: 2px solid #333;
+            background-color: #000;
+        }
+        #camera {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        /* Jewelry overlay styling */
+        .jewelry {
+            position: absolute;
+            width: 100px; /* adjust as needed */
+            transition: transform 0.1s ease;
+        }
+        .controls {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button, select {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Virtual Jewelry Try-On</h1>
+    <div class="camera-container">
+        <video id="camera" autoplay></video>
+        <canvas id="overlay"></canvas>
+    </div>
+
+    <div class="controls">
+        <button onclick="startCamera()">Start Camera</button>
+        <label for="jewelrySelect">Choose Jewelry:</label>
+        <select id="jewelrySelect" onchange="changeJewelry(this.value)">
+            <option value="necklace">Necklace</option>
+            <option value="earrings">Earrings</option>
+            <option value="bracelet">Bracelet</option>
+        </select>
+    </div>
+
+    <script>
+        let video = document.getElementById('camera');
+        let overlayCanvas = document.getElementById('overlay');
+        let context = overlayCanvas.getContext('2d');
+
+        // Start webcam
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("Error accessing the camera: ", error);
+            }
+        }
+
+        // Set default jewelry image
+        let jewelryImg = new Image();
+        jewelryImg.src = 'https://blingbag.co.in/cdn/shop/files/EmeraldTeresaZirconiaJewellerySet_4_1800x1800-Photoroom_1080x.jpg?v=1723277682'; // default jewelry
+
+        // Draw jewelry overlay
+        function drawJewelry() {
+            context.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+            overlayCanvas.width = video.videoWidth;
+            overlayCanvas.height = video.videoHeight;
+
+            // Position jewelry based on face detection or set default position
+            let x = video.videoWidth / 2 - 50; // adjust position
+            let y = video.videoHeight / 2; // adjust position
+            context.drawImage(jewelryImg, x, y, 100, 100); // adjust size
+            requestAnimationFrame(drawJewelry);
+        }
+
+        // Change jewelry
+        function changeJewelry(type) {
+            if (type === 'necklace') {
+                jewelryImg.src = 'path_to_images/necklace.png';
+            } else if (type === 'earrings') {
+                jewelryImg.src = 'path_to_images/earrings.png';
+            } else if (type === 'bracelet') {
+                jewelryImg.src = 'path_to_images/bracelet.png';
+            }
+            jewelryImg.onload = () => requestAnimationFrame(drawJewelry); // Start drawing when the image is loaded
+        }
+
+        // Start drawing when the video is playing
+        video.addEventListener('play', () => {
+            overlayCanvas.width = video.videoWidth; // set width to match video
+            overlayCanvas.height = video.videoHeight; // set height to match video
+            requestAnimationFrame(drawJewelry);
+        });
+    </script>
+
+</body>
+</html>

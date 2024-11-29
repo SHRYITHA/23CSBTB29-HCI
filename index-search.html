@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- nav bar -->
+    <header class="header">
+        <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:30px;">TIMELESS TREASURES</h2>
+        <div class="contact-info"><br>
+            📞 +91 88821 88858<br>
+            E-mail:timelesstreasures@gmail.com
+        </div>
+        <div class="info">
+        <a href="#quick" style="text-decoration: none; color: black;">Quick</a>
+        <a href="#quick" style="text-decoration: none; color: black;">Links</a>
+        <a href="#quick" style="text-decoration: none; color: black;">Info</a>
+        </div>
+        <div class="logo1">
+            <img src="https://res.cloudinary.com/dtnmwdkou/image/upload/v1732117323/WhatsApp_Image_2024-11-20_at_21.11.40_f7fc20c1_mql6ax.jpg">
+        </div><hr>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="http://127.0.0.1:5500/lucx/index.html" style="text-decoration: none;">Luxe</a>
+                <a href="http://127.0.0.1:5500/search-project/index.html" style="text-decoration: none;">🔍</a>
+                <a href="http://127.0.0.1:5500/signin-otp/index.html" style="text-decoration: none;">👤</a>
+                <a href="http://127.0.0.1:5500/wishlist/index.html" style="text-decoration: none;">❤</a>
+                <a href="http://127.0.0.1:5500/cart/cart.html" class="nav-cart" style="text-decoration: none;">🛒</a>
+            </div>
+            <div class="nav-right">
+                <a href="http://127.0.0.1:5500/x/index.html">HOME</a>
+                <a href="http://127.0.0.1:5500/x/index.html">ALL JEWELS</a>
+                <a href="http://127.0.0.1:5500/x/index.html">WHAT'S NEW</a>
+                <div class="dropdown">
+                    <button class="dropbtn">COLLECTION ˅
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="http://127.0.0.1:5500/x/index.html">Wedding Collection</a>
+                        <a href="http://127.0.0.1:5500/x/index.html">Diamond Collection</a>
+                        <a href="http://127.0.0.1:5500/x/index.html">Party Night Collection</a>
+                        <a href="http://127.0.0.1:5500/x/index.html">Desi Girl Collection</a>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    </div>
+    <!-- nav bar -->
+
+
+     <div class="search-container" style="padding-top: 250px; padding-left:800px;">
+        <input type="text" id="search-input" class="search-input" placeholder="Search jewelry...">
+        <button class="search-button" style="padding-top:250px;">
+            <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Search">
+        </button>
+        <button class="close-button" style="padding-top: 250px;">X</button>
+        <!-- <ul id="suggestions" class="suggestions-list"></ul> -->
+    </div> 
+
+
+    <section id="quick">
+        <footer class="footer">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact">
+                    <p>Email: <a href="mailto:">timelesstreasures@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+918882188858">+91 88821 88858</a></p>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/hair%20accesories/index.html">Hair Accessories</a></li>
+                    <li><a href="http://127.0.0.1:5500/rings/index.html">Rings</a></li>
+                    <li><a href="http://127.0.0.1:5500/earrings/index.html">Earrings</a></li>
+                    <li><a href="http://127.0.0.1:5500/neckpieces/index.html">Neckpieces</a></li>
+                    <li><a href="http://127.0.0.1:5500/bracelet-project/index.html">Bracelets</a></li>
+                    <li><a href="http://127.0.0.1:5500/Anklets/index.html">Anklets</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/aboutus/index.html">About Us</a></li>
+                    <li><a href="http://127.0.0.1:5500/terms&conditions/index.html">Terms & Conditions</a></li>
+                    <li><a href="http://127.0.0.1:5500/delivery/index.html">Delivery & Returns</a></li>
+                    <li><a href="http://127.0.0.1:5500/privacy/index.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/signin-otp/index.html">My Account</a></li>
+                    <li><a href="http://127.0.0.1:5500/questions/index.html">Questions?</a></li>
+                </ul>
+                <div class="newsletter">
+                    <h3>Subscribe to our newsletter</h3>
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+        <!-- quick -->
+    <script>
+     // Search keyword mappings
+const searchMappings = {
+    'rings': 'http://127.0.0.1:5500/rings/index.html',
+    'necklaces': 'http://127.0.0.1:5500/neckpieces/index.html',
+    'bracelets': 'http://127.0.0.1:5500/bracelet-project/index.html',
+    'earrings': 'http://127.0.0.1:5500/earrings/index.html',
+    'Hair Accessories':'http://127.0.0.1:5500/hair%20accesories/index.html',
+    'Luxe':'http://127.0.0.1:5500/lucx/index.html',
+    'Party Night Collection': 'http://127.0.0.1:5500/party-night-proj/index.html',
+    'Diamond Collection': 'http://127.0.0.1:5500/diamond%20collection/index.html',
+    'Wedding Collection': 'http://127.0.0.1:5500/wedding/index.html',
+    'Desi Collection': 'http://127.0.0.1:5500/desi-collection/index.html',
+    'All Jewel': 'http://127.0.0.1:5500/alljewels-project/index.html',
+    'Anklets': 'http://127.0.0.1:5500/Anklets/index.html'
+};
+
+// Populate suggestions
+const suggestions = Object.keys(searchMappings);
+const searchInput = document.getElementById('search-input');
+const suggestionsList = document.getElementById('suggestions');
+
+// Autocomplete and suggestions
+searchInput.addEventListener('input', function () {
+    const query = searchInput.value.toLowerCase().trim();
+    suggestionsList.innerHTML = '';
+
+    if (query) {
+        const filteredSuggestions = suggestions.filter(item => item.includes(query));
+        filteredSuggestions.forEach(item => {
+            const highlighted = item.replace(new RegExp(query, 'gi'), match => `<span class="highlight">${match}</span>`);
+            const li = document.createElement('li');
+            li.innerHTML = highlighted;
+            li.setAttribute('data-value', item); // Store the original value
+            li.addEventListener('click', () => {
+                searchInput.value = item; // Update search input
+                suggestionsList.innerHTML = ''; // Clear suggestions
+                searchInput.focus(); // Focus back on input for further edits
+            });
+            suggestionsList.appendChild(li);
+        });
+    }
+});
+
+// Redirect on search button click
+document.querySelector('.search-button').addEventListener('click', function () {
+    const query = searchInput.value.toLowerCase().trim();
+
+    if (searchMappings[query]) {
+        window.location.href = searchMappings[query]; // Redirect to mapped page
+    } else {
+        window.location.href = 'search-results.html'; // Redirect to a default search results page
+    }
+});
+
+// Close button functionality
+document.querySelector('.close-button').addEventListener('click', function () {
+    window.location.href = 'index.html'; // Replace with your home page URL
+});
+
+// Clear suggestions on blur
+searchInput.addEventListener('blur', () => {
+    setTimeout(() => (suggestionsList.innerHTML = ''), 100); // Delay to allow click event to register
+});
+
+
+    </script>
+</body>
+</html>

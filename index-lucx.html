@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:30px;">TIMELESS TREASURES</h2>
+    <div class="contact-info"><br>
+        📞 +91 88821 88858<br>
+        E-mail:timelesstreasures@gmail.com
+    </div>
+    <div class="info">
+    <a href="#quick" style="text-decoration: none; color: black;">Quick</a>
+    <a href="#quick" style="text-decoration: none; color: black;">Links</a>
+    <a href="#quick" style="text-decoration: none; color: black;">Info</a>
+    </div>
+    <div class="logo1">
+        <img src="https://res.cloudinary.com/dtnmwdkou/image/upload/v1732117323/WhatsApp_Image_2024-11-20_at_21.11.40_f7fc20c1_mql6ax.jpg">
+    </div><hr>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="http://127.0.0.1:5500/lucx/index.html" style="text-decoration: none;">Luxe</a>
+            <a href="http://127.0.0.1:5500/search-project/index.html" style="text-decoration: none;">🔍</a>
+            <a href="http://127.0.0.1:5500/signin-otp/index.html" style="text-decoration: none;">👤</a>
+            <a href="http://127.0.0.1:5500/wishlist/index.html" style="text-decoration: none;">❤</a>
+            <a href="http://127.0.0.1:5500/cart/cart.html" class="nav-cart" style="text-decoration: none;">🛒</a>
+        </div>
+        <div class="nav-right">
+            <a href="http://127.0.0.1:5500/x/index.html">HOME</a>
+            <a href="http://127.0.0.1:5500/x/index.html">ALL JEWELS</a>
+            <a href="http://127.0.0.1:5500/x/index.html">WHAT'S NEW</a>
+            <div class="dropdown">
+                <button class="dropbtn">COLLECTION ˅
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="http://127.0.0.1:5500/x/index.html">Wedding Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Diamond Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Party Night Collection</a>
+                    <a href="http://127.0.0.1:5500/x/index.html">Desi Girl Collection</a>
+                </div>
+            </div> 
+        </div>
+    </nav>
+</header>
+</div>
+<!-- nav bar -->
+  <section class="top" id="top">
+    <div class="container">
+      <h1 style="font-style: italic;" class="heading"><center>Luxe</center></h1><br>
+    </div>
+    <main>
+      <div class="product-container">
+        <div class="product">
+            <!-- Wishlist heart icon -->
+            <span class="wishlist-heart" onclick="addToWishlist('Mini Interrupted Hoops', 8755, 'https://www.mishodesigns.com/cdn/shop/products/mini-interrupted-hoops-132899_1000x.jpg?v=1677485383')">❤️</span>
+            <img src="https://www.mishodesigns.com/cdn/shop/products/mini-interrupted-hoops-132899_1000x.jpg?v=1677485383" alt="#" width="200px">
+            <h3>Mini Interrupted Hoops</h3>
+            <p class="price">₹8755</p>
+            <button class="Buynow" data-price="8755">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('Mini Interrupted Hoops',8755 , 'https://www.mishodesigns.com/cdn/shop/products/mini-interrupted-hoops-132899_1000x.jpg?v=1677485383')">Add to Cart</button>
+          </div>
+          <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Mini Star studs', 9064, 'https://www.mishodesigns.com/cdn/shop/products/mini-star-studs-636551_1000x.jpg?v=1677485395')">❤️</span>
+              <img src="https://www.mishodesigns.com/cdn/shop/products/mini-star-studs-636551_1000x.jpg?v=1677485395" alt="#" width="200px">
+              <h3>Mini Golden Star studs</h3>
+              <p class="price">₹9064</p>
+              <button class="Buynow" data-price="9064">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Mini Star studs', 9064, 'https://www.mishodesigns.com/cdn/shop/products/mini-star-studs-636551_1000x.jpg?v=1677485395')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Mini Ovo Ring', 6180,'https://www.mishodesigns.com/cdn/shop/files/mini-ovo-ring-608271_400x.jpg?v=1725028862')">❤️</span>
+              <img src="https://www.mishodesigns.com/cdn/shop/files/mini-ovo-ring-608271_400x.jpg?v=1725028862" alt="#" width="200px">
+              <h3>Mini Golden Ovo Ring</h3>
+              <p class="price">₹6180</p>
+              <button class="Buynow" data-price="https://www.mishodesigns.com/cdn/shop/files/mini-ovo-ring-608271_400x.jpg?v=1725028862">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Mini Ovo Ring', 6180,'https://www.mishodesigns.com/cdn/shop/files/mini-ovo-ring-608271_400x.jpg?v=1725028862')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Juicy Love Ring', 6695, 'https://www.mishodesigns.com/cdn/shop/products/juicy-love-ring-234381_1000x.jpg?v=1677485276')">❤️</span>
+              <img src="https://www.mishodesigns.com/cdn/shop/products/juicy-love-ring-234381_1000x.jpg?v=1677485276" alt="#" width="200px">
+              <h3>Blue Juicy Love Ring</h3>
+              <p class="price">₹6695</p>
+              <button class="Buynow" data-price="6695">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Juicy Love Ring',6695, 'https://www.mishodesigns.com/cdn/shop/products/juicy-love-ring-234381_1000x.jpg?v=1677485276')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('White gold and diamonds bracelet', 6789, 'https://www.damiani.com/media/catalog/product/2/0/20085827_1.jpg?optimize=high&fit=bounds&height=1000&width=1000&canvas=1000:1000')">❤️</span>
+              <img src="https://www.damiani.com/media/catalog/product/2/0/20085827_1.jpg?optimize=high&fit=bounds&height=1000&width=1000&canvas=1000:1000" alt="#" width="200px">
+              <h3>White gold and diamonds bracelet</h3>
+              <p class="price">₹6789</p>
+              <button class="Buynow" data-price="6789">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('White gold and diamonds bracelet', 6789, 'https://www.damiani.com/media/catalog/product/2/0/20085827_1.jpg?optimize=high&fit=bounds&height=1000&width=1000&canvas=1000:1000')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Divas’ Dream Necklace', 7600, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/470636.png')">❤️</span>
+              <img src="https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/470636.png" alt="#" width="200px">
+              <h3>Divas’ Dream Necklace</h3>
+              <p class="price">₹7600</p>
+              <button class="Buynow" data-price="7600">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Divas’ Dream Necklace',7600 ,'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/470636.png')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Divas’ Dream Earrings', 13400, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/469631.png')">❤️</span>
+              <img src="https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/469631.png" alt="#" width="200px">
+              <h3>Divas’ Dream Earrings</h3>
+              <p class="price">₹13400</p>
+              <button class="Buynow" data-price="13400">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Divas’ Dream Earrings',13400 , 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/469631.png')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Bvlgari Cabochon Necklace', 7250, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1621577.png')">❤️</span>
+              <img src="https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1621577.png" alt="#" width="200px">
+              <h3>Bvlgari Cabochon Necklace</h3>
+              <p class="price">₹7250</p>
+              <button class="Buynow" data-price="7250">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Bvlgari Cabochon Necklace',7250,'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1621577.png')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Serpenti Viper Bracelet', 7050, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1562465.png')">❤️</span>
+              <img src="https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1562465.png" alt="#" width="200px">
+              <h3>Serpenti Viper Bracelet</h3>
+              <p class="price">₹7050</p>
+              <button class="Buynow" data-price="7050">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Serpenti Viper Bracelet', 7050, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1562465.png')">Add to Cart</button>
+            </div>
+            <div class="product">
+              <!-- Wishlist heart icon -->
+              <span class="wishlist-heart" onclick="addToWishlist('Fiorever Pink Necklace', 11800, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1445157.png')">❤️</span>
+              <img src="https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1445157.png" alt="#" width="200px">
+              <h3>Fiorever Pink Necklace</h3>
+              <p class="price">₹11800</p>
+              <button class="Buynow" data-price="11800">Buy Now</button>
+              <button class="add-to-cart" onclick="addToCart('Fiorever Necklace',11800, 'https://media.bulgari.com/image/upload/c_pad,h_1982,w_1982/q_auto/f_auto/1445157.png')">Add to Cart</button>
+            </div>
+        <!-- Repeat other products similarly -->
+      </div>
+    </main>
+
+
+    <!-- quick -->
+    <section id="quick">
+      <footer class="footer">
+          <div class="footer-column">
+              <h3>Contact Us</h3>
+              <div class="contact">
+                  <p>Email: <a href="mailto:">timelesstreasures@gmail.com</a></p>
+                  <p>Phone: <a href="tel:+918882188858">+91 88821 88858</a></p>
+              </div>
+          </div>
+          <div class="footer-column">
+              <h3>Categories</h3>
+              <ul>
+                  <li><a href="http://127.0.0.1:5500/hair%20accesories/index.html">Hair Accessories</a></li>
+                  <li><a href="http://127.0.0.1:5500/rings/index.html">Rings</a></li>
+                  <li><a href="http://127.0.0.1:5500/earrings/index.html">Earrings</a></li>
+                  <li><a href="http://127.0.0.1:5500/neckpieces/index.html">Neckpieces</a></li>
+                  <li><a href="http://127.0.0.1:5500/bracelet-project/index.html">Bracelets</a></li>
+                  <li><a href="http://127.0.0.1:5500/Anklets/index.html">Anklets</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Information</h3>
+              <ul>
+                  <li><a href="http://127.0.0.1:5500/aboutus/index.html">About Us</a></li>
+                  <li><a href="http://127.0.0.1:5500/terms&conditions/index.html">Terms & Conditions</a></li>
+                  <li><a href="http://127.0.0.1:5500/delivery/index.html">Delivery & Returns</a></li>
+                  <li><a href="http://127.0.0.1:5500/privacy/index.html">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="http://127.0.0.1:5500/signin-otp/index.html">My Account</a></li>
+                  <li><a href="http://127.0.0.1:5500/questions/index.html">Questions?</a></li>
+              </ul>
+              <div class="newsletter">
+                  <h3>Subscribe to our newsletter</h3>
+                  <input type="email" placeholder="Your email address">
+                  <button>Subscribe</button>
+              </div>
+          </div>
+      </footer>
+  </section>
+      <!-- quick -->
+    <script>
+      document.querySelectorAll('.Buynow').forEach(button => {
+    button.addEventListener('click', function() {
+        const price = this.getAttribute('data-price');
+        const paymentUrl = `https://www.example.com/payment?amount=${price}`;
+        window.location.href = "http://127.0.0.1:5500/payment-project/index.html";
+    });
+})
+      // Add to Cart functionality
+      function addToCart(productName, price, imageSrc) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: productName, price: price, image: imageSrc });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${productName} has been added to your cart!`);
+      }
+
+      // Add to Wishlist functionality
+      function addToWishlist(productName, price, imageSrc) {
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.push({ name: productName, price: price, image: imageSrc });
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        alert(`${productName} has been added to your wishlist!`);
+      }
+    </script>
+</body>
+</html>
